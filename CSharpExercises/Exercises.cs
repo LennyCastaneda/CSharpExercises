@@ -13,6 +13,7 @@ namespace CSharpExercises
         // Create a method called HelloWorld that returns the following string - "Hello World!"
         public static string HelloWorld()
         {
+            // Return the string "Hello World!"
             return "Hello World!";
         }
 
@@ -21,61 +22,83 @@ namespace CSharpExercises
         // 1. Create a method called SayHello that accepts a string representing a name and returns a welcome message (E.g. "Hello John!")
         public static string SayHello(string name)
         {
+            // Return the string "Hello" with the name variable concatinated to it with "!".
             return ("Hello " + name + "!");
         }
         // 2. Create a method called Sum that accepts two integers and returns their sum.
         public static int Sum(int a, int b)
         {
+            // Return the two variables summed together with + operator.
             return a + b;
         }
         // 3. Create a method called Divide that accepts two decimals and returns the result of dividing the two numbers as a decimal.
         public static double Divide(double a, double b)
         {
+            // Return the two variables divided by eachother with / operator.
             return (a / b);
         }
         // 4. Create a method called CanOpenCheckingAccount that accepts an integer representing a customers age, returning true if the age is greater than or equal to 18, or false if the argument is less than 18.
         public static bool CanOpenCheckingAccount(int customersAge)
         {
+            // If state that checks if the customerAge variable is greater than or equal to 18, if so return true
             if (customersAge >= 18)
                 return true;
             else
+                // If customerAge is not greater than or equal to 18 then return false.
                 return false;
         }
         // 5. Create a method called GetFirstName that accepts a string representing a full name (e.g. "John Smith"), and returns only the first name.
         public static string GetFirstName(string fullName)
         {
+            // Use .Split function to split the string fullName and assign that value to entireName variable array that has two indexes.
             var entireName = fullName.Split(' ');
+            // Take the first index of entireName array and assign it to firstName string variable.
             string firstName = entireName[0];
+            // Take the second index of entireName array and assign it to firstName string variable.
             string lastName = entireName[1];
-
+            // Take the two separate name variable strings and concatenate them and assign to fullName string variable.
             fullName = firstName + lastName;
+            // Return firstName string.
             return firstName;
         }
 
         //Assert("GetFirstName(\"Ann-Marie Simpson\" should return \"Ann-Marie\"", Exercises.GetFirstName("Ann-Marie Simpson") == "Ann-Marie");
         public static string GetFirstName(string firstName, string lastName)
         {
+            // Return the firstName contactenated with the lastName stirng variables using the GetFirstName function above.
+            // Since GetFirstName is within the same public class when called again this new instance of that function call access it and run.
             return firstName + lastName;
         }
 
         // 6. Create a method called ReverseStringHard that accepts a string and returns the string in reverse. (No built in functions allowed)
         public static string ReverseStringHard(string reverse)
         {
+            // Create a new instance of the char array passing in the entire length of the reverse string.
+            // Assign it to chars array variable.
             char[] chars = new char[reverse.Length];
-
+            // For loop that stars at the 'beginning' of the reverse array, and at 'end' of reverse array.
+            // Then swap the begging index character value with the end index character value as long as 'beggining' is less than or equal to 'end'
+            // Then incrament beginning index by 1 and decrement end by 1 and repeat loop of swap index values 
             for (int beginning = 0, end = reverse.Length - 1; beginning <= end; beginning++, end--)
             {
+                // Put the character that was at the end of the string index to the beginning.
                 chars[beginning] = reverse[end];
+                // Put the character that was at the beginning of the string index to the end.
                 chars[end] = reverse[beginning];
             }
+            // Return a new instance of the chars variable array with the swapped characters in reverse order.
             return new string(chars);
         }
 
         // 7. Create a method called ReverseStringEasy that accepts a string and returns the string in reverse. (Using only built in functions)
         public static string ReverseStringEasy(string reverse)
         {
+            // Use the .ToCharArray C# method on the 'reverse' string to turn the string into an array of charaters
+            // Then assign it to the charArray variable array.
             char[] charArray = reverse.ToCharArray();
+            // Take new charArray variable array of the string variable and pass it into the C# Array.Reverse method.
             Array.Reverse(charArray);
+            // Return a new instance of the charArray passed in the string class in order to for charArray to return as a string.
             return new string(charArray);
         }
 
@@ -373,7 +396,6 @@ namespace CSharpExercises
          * 19
          * Goose
          */
-
         public static string DuckGoose(int Iteration)
         {
             string outPut = "";

@@ -133,8 +133,6 @@ namespace CSharpExercises
             return table;
         }
 
-
-
         // 9. Create a method called ConvertKelvinToFahrenheit that accepts a double representing a temperature in kelvin and returns a double containing the temperature in Fahrenheit.
         public static double ConvertKelvinToFahrenheit(double kelvin)
         {
@@ -147,6 +145,7 @@ namespace CSharpExercises
             // return the total Fahrenheit value.
             return Fahrenheit;
         }
+
         // 10. Create a method called GetAverageHard that accepts an array of integers and returns the average value as a double. (No built in functions allowed)
         public static double GetAverageHard(int[] values)
         {
@@ -202,6 +201,7 @@ namespace CSharpExercises
 
             return triangle;
         }
+
         // 13. Create a method called GetMilesPerHour that accepts a double representing distance and three integers representing hours, minutes and seconds. The method should return the speed in MPH rounded to the nearest whole number as a string. (e.g. "55MPH")
         public static string GetMilesPerHour(double miles, int hours, int minutes, int seconds)
         {
@@ -239,6 +239,7 @@ namespace CSharpExercises
             // return false if the code reaches this point, the parameter is now a vowel
             return false;
         }
+
         // 15. Create a method called IsConsonant that accepts a char parameter and returns true if the parameter is a consonant or false if the parameter is a vowel.
         public static bool IsConsonant(char c)
         {

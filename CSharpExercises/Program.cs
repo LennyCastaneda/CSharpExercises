@@ -14,8 +14,8 @@ namespace CSharpExercises
             /* Print Welcome Message */
             Console.WriteLine("CSharpExercises");
             Console.WriteLine();
-
-            /* Test exercises (Uncomment tests to run them) (Ctrl + K,C to mass comment, Ctrl + K,U to mass uncomment) */
+            
+           /* Test exercises (Uncomment tests to run them) (Ctrl + K,C to mass comment, Ctrl + K,U to mass uncomment) */
             Assert("HelloWorld() should return \"Hello World!\"", Exercises.HelloWorld() == "Hello World!");
             Assert("SayHello(\"John\") should return \"Hello John!\"", Exercises.SayHello("John") == "Hello John!");
             Assert("Sum(10,12) should return 22", Exercises.Sum(10, 12) == 22);
